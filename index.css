@@ -6,7 +6,7 @@ body {
 
 .neon-red-header {
     color: #FF3131;
-    font-family: 'Neonderthaw', cursive;
+    font-family: 'Neonderthaw', sans-serif;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
