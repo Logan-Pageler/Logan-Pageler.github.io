@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: NeonLights;
+    src: url('assets/fonts/Neon Light Font/Neon Light Font/neon-light.otf');
+}
 
 body {
     background-color: #0A0A0A;
@@ -6,7 +9,7 @@ body {
 
 .neon-red-header {
     color: #FF3131;
-    font-family: 'Neonderthaw', sans-serif;
+    font-family: NeonLights, sans-serif;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
