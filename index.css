@@ -7,12 +7,22 @@ body {
     background-color: #0A0A0A;
 }
 
+.navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+
 .neon-red-header {
     color: #FF3131;
     font-family: NeonLights, sans-serif;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
+    font-size: 80px;
+    text-shadow: 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #e62323, 0 0 40px #e62323;
 }
 
 @-webkit-keyframes glow {
