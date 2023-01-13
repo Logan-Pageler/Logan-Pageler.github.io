@@ -5,12 +5,12 @@ body {
 }
 
 .neon-red-header {
-    color: #FD1C03;
-    font-family: 'Roboto', sans-serif;
+    color: #FF3131;
+    font-family: 'Neonderthaw', cursive;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
-  }
+}
 
 @-webkit-keyframes glow {
     from {
