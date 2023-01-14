@@ -67,3 +67,11 @@ ul li:hover {
 #about {
     top:100%
 }
+
+.vl {
+    border-left: 6px solid #DDDDDD;
+    border-radius: 3px;
+    height: 500px;
+    margin-right: 40px;
+    float: left;
+}
