@@ -1,139 +1,416 @@
 <html leng="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/images/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/images/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="assets/images/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<link type="text/css" rel="stylesheet" href="index.css" />
+		<script src="javascript/navbar.js" defer></script>
+		<script src="javascript/projects.js" defer></script>
+		<script src="javascript/routes.js" defer></script>
+	</head>
 
-<head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto&display=swap" rel="stylesheet" />
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
-	<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-	<link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-	<meta name="msapplication-TileColor" content="#da532c" />
-	<meta name="theme-color" content="#ffffff" />
-	<link type="text/css" rel="stylesheet" href="index.css" />
-	<script src="javascript/navbar.js" defer></script>
-</head>
-
-<body>
-
-	<div class="content" id="main">
-		<center>
-			<img src="assets/images/balloon.svg" style="width: 20%" />
-			<br />
-			<h1 class="neon-red-header">LOGAN PAGELER</h1>
-		</center>
-	</div>
-
-	<div id="navbar" style="transition-property: none" class="navbar-scroll">
-		<div style="float: left; color: #b9a44c">
-			<h1>Logan Pageler</h1>
-		</div>
-		<div style="float: right">
-			<ul>
-				<li href="#main">Home</li>
-				<li href="#about">About</li>
-				<li>Projects</li>
-				<li>Contact</li>
-			</ul>
-		</div>
-	</div>
-	<br />
-	<div class="content" id="about">
-		<div style="
-						display: grid;
-						grid-template-columns: 0.6fr 0.4fr;
-						padding-left: 10%;
-					">
-			<div>
-				<h1 style="
-								font-size: 80px;
-								font-family: metallic;
-								margin-left: 5%;
-								color: #96dcd0;
-							">
-					ABOUT ME:
-				</h1>
+	<body onload="updateRoute()">
+		<div id="home" class="content">
+			<center>
+				<img src="assets/images/balloon.svg" style="width: 20%" />
 				<br />
-				<div style="
-								display: grid;
-								grid-template-columns: 0.9fr 0.1fr;
-								padding-left: 10%;
-							">
-					<div style="
-									font-size: 25px;
-									color: #a6ece0;
-									font-family: 'Roboto Mono', monospace;
-								">
-						<p>
-							My name is Logan Pageler, and I am Junior at
-							the University of Arizona. Currently I am on
-							track to graduation with a Bachelor's of
-							Science in Computer Science and a Bachelors
-							of Math with a Computer Science emphasis in
-							the spring of 2024. I am planning to
-							graduate with a Masters in Computer Science
-							in the spring of 2025 through the University
-							of Arizona's accelerated masters program. I
-							am mainly interested in recently developed
-							technologies including A.I. and quantum
-							computing.
-						</p>
+				<h1 class="neon-red-header">LOGAN PAGELER</h1>
+			</center>
+		</div>
+		<div
+			id="navbar"
+			style="transition-property: none"
+			class="navbar-scroll"
+		>
+			<div style="float: left; color: #b9a44c">
+				<h1>Logan Pageler</h1>
+			</div>
+			<div style="float: right">
+				<ul>
+					<li onclick="goToPage('home');">Home</li>
+					<li onclick="goToPage('about');">About</li>
+					<li onclick="goToPage('projects');">Projects</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+		</div>
+		<br />
+		<div id="about" class="content">
+			<div
+				style="
+					display: grid;
+					grid-template-columns: 0.6fr 0.4fr;
+					padding-left: 10%;
+				"
+			>
+				<div>
+					<h1
+						style="
+							font-size: 80px;
+							font-family: metallic;
+							margin-left: 5%;
+							color: #96dcd0;
+						"
+					>
+						ABOUT ME:
+					</h1>
+					<br />
+					<div
+						style="
+							display: grid;
+							grid-template-columns: 0.9fr 0.1fr;
+							padding-left: 10%;
+						"
+					>
+						<div
+							style="
+								font-size: 25px;
+								color: #a6ece0;
+								font-family: 'Roboto Mono', monospace;
+							"
+						>
+							<p>
+								My name is Logan Pageler, and I a am Junior at
+								the University of Arizona. Currently I am on
+								track to graduation with a Bachelor's of Science
+								in Computer Science and a Bachelors of Math with
+								a Computer Science emphasis in the spring of
+								2024. I am planning to graduate with a Masters
+								in Computer Science in the spring of 2025
+								through the University of Arizona's accelerated
+								masters program. I am mainly interested in
+								recently developed technologies including A.I.
+								and quantum computing.
+							</p>
+							<br />
+							<p>
+								I enjoy spending time outside too. Some of my
+								main hobbies include running, rock climbing, and
+								camping. I also enjoy giving back to the
+								community. I like to participate in road
+								cleanups, and build houses for Habitat for
+								Humanity.
+							</p>
+						</div>
+						<div>
+							<div class="vl"></div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<div class="carousel">
+						<div class="carousel__item">
+							<div
+								class="carousel__item-body"
+								style="
+									background-image: url(assets/images/italy.jpg);
+									background-size: cover;
+								"
+							></div>
+						</div>
+						<div class="carousel__item">
+							<div
+								class="carousel__item-body"
+								style="
+									background-image: url(assets/images/formal.jpg);
+									background-size: cover;
+								"
+							></div>
+						</div>
+						<div class="carousel__item">
+							<div
+								class="carousel__item-body"
+								style="
+									background-image: url(assets/images/triathlon.jpg);
+									background-size: cover;
+								"
+							></div>
+						</div>
+						<div class="carousel__item">
+							<div
+								class="carousel__item-body"
+								style="
+									background-image: url(assets/images/friends.jpg);
+									background-size: cover;
+								"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="projects" class="sky">
+			<div style="padding-top: 75vh"></div>
+			<img
+				id="project-header"
+				class="content"
+				src="assets/images/airplane.svg"
+			/>
+			<div id="ai">
+				<div
+					style="margin-top: 40vh; margin-left: 10vw; width: 60vw"
+					class="project-content"
+				>
+					<h1
+						style="
+							font-size: 40px;
+							font-family: metallic;
+							margin-left: 5%;
+							width: 90%;
+							color: #96dcd0;
+							text-align: center;
+						"
+					>
+						ARTIFICIAL INTELLIGENCE:
+					</h1>
+					<p
+						style="
+							font-size: 18px;
+							color: #c68c0f;
+							font-family: 'Roboto Mono', monospace;
+							margin: 2%;
+						"
+					>
+						&emsp; I first started experimenting with Artificial
+						Intelligence at the start of my sophomore year of
+						highschool. My first project was a very simple
+						evolutionary AI programmed from scratch in Java. I
+						trained a group of dots to slowly travel the length of
+						the screen, all while avoiding obstacles. My eyes lit up
+						when they first made it to the goal. However, I quickly
+						became bored with the dots and moved to more advance
+						algorithms.
+
 						<br />
-						<p>
-							I enjoy spending time outside too. Some of
-							my main hobbies include running, rock
-							climbing, and camping. I also am a big fan
-							of board games. Recently I have been trying
-							to increase my number of Catan extension
-							packs.
+					</p>
+				</div>
+				<div style="margin-top: 10vh; display: flex">
+					<div
+						style="margin-left: 5vw; width: 25vw; height: 25vw"
+						class="project-content"
+					>
+						<p
+							style="
+								font-size: 18px;
+								color: #c68c0f;
+								font-family: 'Roboto Mono', monospace;
+								margin: 2%;
+							"
+						>
+							Image on its way. (Pardon my dust)
 						</p>
 					</div>
-					<div>
-						<div class="vl"></div>
+					<div
+						style="margin-top: 10vh; margin-left: 5vw; width: 50vw"
+						class="project-content"
+					>
+						<p
+							style="
+								font-size: 18px;
+								color: #c68c0f;
+								font-family: 'Roboto Mono', monospace;
+								margin: 2%;
+							"
+						>
+							&emsp; I moved on to Neural Networks. My first
+							iteration was supervised learning Neural Network
+							that used gradient decent to increase it's accuracy.
+							The entire project was also programmed from scratch
+							in java. I trained the network to recognized
+							checkerboard patterns and binary numbers. I about
+							fell out of my seat the night it finally got a 95%
+							accuracy on checkerboards. However, I quickly ran
+							out of tests for it so I decided to give it an
+							upgrade.
+							<br />
+							<br />
+							&emsp; My next goal was to perform unsupervised
+							learning through Q-Learning and my existing neural
+							network. It took me several month of perseverance to
+							get the model to function properly. The only
+							application I trained it to do was to drift around a
+							track I had made. I couldn't believe my eyes when I
+							woke up one morning (after letting my computer train
+							all night for the millionth time) to seeing a car
+							zipping around a track all on its own.
+						</p>
 					</div>
 				</div>
+				<div
+					style="margin-top: 10vh; margin-left: 5vw; width: 60vw"
+					class="project-content"
+				>
+					<p
+						style="
+							font-size: 18px;
+							color: #c68c0f;
+							font-family: 'Roboto Mono', monospace;
+							margin: 2%;
+						"
+					>
+						&emsp; Nowadays, I rely on libraries for my AI projects.
+						I have built and worked with a variety of AIs to
+						categorize Images, recognize text, understand speach,
+						and much more. However, since starting to use libraries,
+						these projects have become much easier, so I have
+						decided to combine them all into one mega-assitant AI.
+						<br /><br />
+						&emsp; My next project I have been working on is a smart
+						home AI that can adjust to my behaviors. There's many
+						features I want to implement, but for starters I want it
+						to be able to recognize when someone introduces
+						themselves, and create a profile for them to recognize
+						them by face and voice. My next goal would be to add
+						room following, where it knows what room of the house
+						people are in. Then it can do things like make their
+						music follow them. My two biggest hiccups right now are
+						time, and also I wanted to switch from TensorFlow to
+						PyTorch since it is much better supported.
+						<br />
+					</p>
+				</div>
 			</div>
-			<div class="wrapper">
-				<div class="carousel">
-					<div class="carousel__item">
-						<div class="carousel__item-body" style="
-										background-image: url(assets/images/italy.jpg);
-										background-size: cover;
-									"></div>
-					</div>
-					<div class="carousel__item">
-						<div class="carousel__item-body" style="
-										background-image: url(assets/images/formal.jpg);
-										background-size: cover;
-									"></div>
-					</div>
-					<div class="carousel__item">
-						<div class="carousel__item-body" style="
-										background-image: url(assets/images/triathlon.jpg);
-										background-size: cover;
-									"></div>
-					</div>
-					<div class="carousel__item">
-						<div class="carousel__item-body" style="
-										background-image: url(assets/images/friends.jpg);
-										background-size: cover;
-									"></div>
-					</div>
+			<div id="shapemon">
+				<div
+					style="margin-top: 40vh; margin-left: 30vw; width: 60vw"
+					class="project-content"
+				>
+					<img
+						src="assets/images/ShapemonTitle.gif"
+						style="
+							width: 50%;
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+						"
+					/>
+					<p
+						style="
+							font-size: 18px;
+							color: #c68c0f;
+							font-family: 'Roboto Mono', monospace;
+							margin: 2%;
+						"
+					>
+						&emsp; Shapemon was my teams final project for the class
+						introduction to computer programming in my freshman year
+						of high school. The code is definitely a mess, and this
+						project was a huge learning experience but none the
+						less, the game is pretty fun.
+						<br />
+						<br />
+						&emsp; I drew half the assets, and one of my friends did
+						the other half (I think? But also maybe they just took
+						them from online because they look scarily similar to
+						pokemon emerald). There were 3 people in our group who
+						worked on the code. I was in charge of the map and
+						graphics, one friends was in charge of battling, and the
+						other was in charge of the inventory. Although I have
+						made a few changes since its submission (fixing game
+						breaking bugs) but I tried to leave the original
+						structure the same. (As much as hurts because of its
+						messiness).
+						<br />
+					</p>
+				</div>
+			</div>
+			<div style="margin-top: 10vh; display: flex">
+				<div
+					style="margin-left: 5vw; width: 35vw; height: fit-content"
+					class="project-content"
+				>
+					<img src="assets/images/Shapemon.png" style="width: 100%" />
+				</div>
+				<div
+					style="margin-left: 5vw; width: 50vw; margin-top: 20vw"
+					class="project-content"
+				>
+					<p
+						style="
+							font-size: 18px;
+							color: #c68c0f;
+							font-family: 'Roboto Mono', monospace;
+							margin: 2%;
+						"
+					>
+						&emsp; While Shapemon may not be a good representation
+						of my current programming capabilities, it is definitely
+						an amazing representation of my passion for coding. With
+						very limited tools under my belt, I spent multitudes of
+						hours to finish the project in under just one month. I
+						easily coded away most of my spring break that year. I
+						spent on average 4 hours programming every day for that
+						month, on top of my other school work. I easily stayed
+						up past midnight most nights to work on it. Ultimately
+						the project is one I'm quite proud of, (even though it
+						pains me to know that I stuffed 12k lines into 1 file)
+						and I hope to work on many more large scale projects in
+						the future.
+						<br />
+						<br />
+						&emsp; Shapemon is available for view and download on my
+						Git Hub under the repository shapemon. Alternatively
+						click bellow to view it.
+					</p>
+					<a
+						href="https://github.com/Logan-Pageler/shapemon"
+						target="_blank"
+						style="
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+							background-color: rgb(22 163 74);
+							border-radius: 0.25rem;
+							color: rgb(255 255 255);
+							width: fit-content;
+							padding: 0.5rem 1.25rem;
+							font-family: 'VT323', monospace;
+							font-size: 30px;
+							text-decoration: none;
+						"
+					>
+						SHAPEMON
+					</a>
+					<br />
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="projects">
-		<div class="content">
-			<div>
-				<h1 style="font-size: 80px; font-family: metallic; margin-left:5%;">PROJECTS:</h1>
-			</div>
-		</div>
-	</div>
-
-</body>
-
+	</body>
 </html>
